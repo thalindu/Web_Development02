@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework input</title>
+    <script type="text/javascript">
+        "use strict";
+        const students = [
+            ["John", 55],
+            ["Lara", 79],
+            ["Roy", 97],
+            ["Tabitha", 42],
+            ["Tim", 81],
+            ["Sandra", 96],
+        ];
+        let sum = 0;
+        let average = 0;
+        let namesgtn = [];
+        
+        for (let i = 0 ; i < students.length ; i++) {
+            const [name,marks] = students[i];
+            sum += marks;
+
+            if(marks > 90)
+                namesgtn.push(name);
+
+            // for (let j = 0 ; j < students.length ; j++){
+            //     const [name1,marks1] = students[j];
+            //     if(marks1 > marks){
+            //         const maxlist = students[i];
+            //         students[i] = students[j];
+            //         students[j] = maxlist;
+
+            //     }
+
+            // }
+            
+
+        }
+        average = sum/students.length
+        console.log("Total score : ",sum)
+        console.log("Average score : ",average)
+        //console.log(students[1,1])
+        console.log("Students over 90: ")
+        namesgtn.forEach(name => console.log(name))
+        // console.log(namesgtn);
+        console.log("Students sorted by score: ")
+        students.sort((a,b)=>b[1]-a[1]).forEach(([name,marks])=>console.log(name +" - "+ marks))
+            
+
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>
